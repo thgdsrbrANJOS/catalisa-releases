@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade · Catalisa</title>
+<meta name="description" content="Como o Catalisa trata os seus dados: tudo fica na sua máquina, e o que é enviado para serviços externos é opcional e está descrito aqui.">
+<link rel="icon" href="images/catalisa-logo.png">
+<style>
+  :root { --bg:#f4f3f1; --card:#ffffff; --text:#1e1e1c; --muted:#6a6862; --accent:#16796a; --line:#e3e1dd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1f1f1e; --card:#282827; --text:#f2f1ef; --muted:#a9a7a2; --accent:#3fb39f; --line:#3a3a38; } }
+  * { box-sizing:border-box }
+  body { margin:0; font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.65 }
+  main { max-width:820px; margin:0 auto; padding:44px 20px 64px }
+  header { margin-bottom:28px }
+  header img { width:56px; height:56px; border-radius:13px; vertical-align:middle }
+  header .nome { font-size:20px; font-weight:600; margin-left:12px; vertical-align:middle }
+  h1 { font-size:32px; margin:24px 0 6px }
+  .data { color:var(--muted); font-size:14px; margin:0 0 28px }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 26px; margin-bottom:14px }
+  h2 { font-size:20px; margin:0 0 10px }
+  h3 { font-size:15px; margin:18px 0 6px }
+  ul { padding-left:20px; margin:8px 0 }
+  li { margin:6px 0 }
+  p { margin:10px 0 }
+  a { color:var(--accent) }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  th { color:var(--muted); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.04em }
+  .destaque { background:var(--bg); border-left:3px solid var(--accent); padding:14px 16px; border-radius:0 8px 8px 0; margin:14px 0 }
+  footer { text-align:center; color:var(--muted); font-size:14px; margin-top:28px }
+  footer a { color:var(--accent) }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a href="index.html"><img src="images/catalisa-logo.png" alt="Catalisa"></a>
+    <span class="nome">Catalisa</span>
+  </header>
+
+  <h1>Política de privacidade</h1>
+  <p class="data">Última atualização: 16 de novembro de 2026</p>
+
+  <section>
+    <h2>Em uma frase</h2>
+    <p>
+      O Catalisa é um programa que roda na sua máquina. Ele não tem servidor, não cria conta
+      e não envia a sua agenda para lugar nenhum — exceto para os serviços que
+      <strong>você mesmo configurar</strong>, do jeito descrito abaixo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Quem somos</h2>
+    <p>
+      O Catalisa é um programa pessoal, desenvolvido e mantido por um professor de química
+      para a própria rotina de trabalho, e disponibilizado para quem quiser usar. Não há
+      empresa por trás, nem monetização, nem publicidade.
+    </p>
+<p>
+      Para dúvidas, problemas ou pedidos relacionados aos seus dados, abra uma conversa em
+      <a href="https://github.com/thgdsrbrANJOS/catalisa-releases/issues">github.com/thgdsrbrANJOS/catalisa-releases/issues</a>.
+      É o canal oficial de contato do programa, e qualquer pessoa pode escrever por lá.
+    </p>
+  </section>
+
+  <section>
+    <h2>O que fica guardado, e onde</h2>
+    <p>
+      Tudo o que o Catalisa guarda fica no seu computador, na pasta
+      <code>%APPDATA%\Catalisa</code>:
+    </p>
+    <table>
+      <tr><th>Arquivo</th><th>O que contém</th></tr>
+      <tr><td><code>agenda.json</code></td><td>Seus compromissos, tarefas, calendários e cronogramas importados</td></tr>
+      <tr><td><code>settings.json</code></td><td>Suas preferências e as chaves de API que você colar</td></tr>
+      <tr><td><code>google-auth/</code></td><td>A autorização do Google, renovada automaticamente</td></tr>
+    </table>
+    <p>
+      Esses arquivos nunca são enviados para nós. Não existe “nós” do ponto de vista técnico:
+      não há servidor, banco de dados ou serviço de análise associado ao programa.
+    </p>
+    <div class="destaque">
+      <p style="margin:0">
+        <strong>Importante:</strong> esses arquivos são guardados em texto legível. Quem tiver
+        acesso ao seu usuário do Windows pode abri-los. Trate a máquina onde o Catalisa está
+        instalado como você trataria a sua própria agenda de papel.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Google Calendar</h2>
+    <p>
+      A sincronização com o Google é <strong>opcional</strong> e só acontece depois que você
+      autoriza, no seu navegador, com a sua conta.
+    </p>
+    <h3>O que o Catalisa acessa</h3>
+    <ul>
+      <li>A lista dos seus calendários, para você escolher quais quer ver</li>
+      <li>Os eventos desses calendários, para mostrá-los na grade</li>
+      <li>Permissão de escrita, usada apenas quando você cria ou altera um compromisso</li>
+    </ul>
+    <h3>O que o Catalisa faz com isso</h3>
+    <p>
+      Mostra na tela e guarda localmente, para a agenda continuar funcionando sem internet.
+      Esses dados não são enviados para nenhum servidor nosso, não são usados para
+      publicidade, não são vendidos e não alimentam treinamento de modelo nenhum.
+    </p>
+    <h3>Como revogar</h3>
+    <p>
+      Em <em>Configurações → Google Calendar → Sair da conta</em>, o que apaga a autorização
+      desta máquina. Você também pode revogar a qualquer momento em
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+    </p>
+    <div class="destaque">
+      <p style="margin:0">
+        O uso que o Catalisa faz de informações recebidas das APIs do Google segue a
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de
+        Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de
+        <em>Uso Limitado</em>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Inteligência artificial</h2>
+    <p>
+      O Catalisa funciona inteiramente sem IA: a leitura de frases como
+      <em>“prova quinta 14h”</em> é feita por um interpretador que roda na sua máquina.
+    </p>
+    <p>
+      A IA é um reforço <strong>opcional</strong>, que só entra se você configurar uma chave
+      de API própria, do Claude (Anthropic) ou do Gemini (Google). Quando está ligada, estes
+      são os únicos momentos em que texto sai do seu computador:
+    </p>
+    <table>
+      <tr><th>Quando</th><th>O que é enviado</th></tr>
+      <tr>
+        <td>Você digita uma frase que o leitor local não entendeu com confiança</td>
+        <td>A frase digitada e a data de hoje</td>
+      </tr>
+      <tr>
+        <td>Você importa um arquivo de cronograma</td>
+        <td>O texto extraído do arquivo que você escolheu</td>
+      </tr>
+      <tr>
+        <td>O resumo do dia é gerado</td>
+        <td>Os compromissos do dia <strong>criados no próprio Catalisa</strong></td>
+      </tr>
+    </table>
+    <div class="destaque">
+      <p style="margin:0">
+        <strong>Compromissos vindos do Google Calendar não são enviados para a IA</strong>,
+        a não ser que você ligue explicitamente a opção “Incluir compromissos do Google no
+        resumo do dia”, em Configurações. Ela vem desligada.
+      </p>
+    </div>
+    <p>
+      O que acontece com o texto depois de sair daqui passa a ser regido pelos termos do
+      serviço que você escolheu — a cobrança, a retenção e o uso dos dados são do seu
+      contrato com eles, não conosco:
+      <a href="https://www.anthropic.com/legal/privacy">privacidade da Anthropic</a> ·
+      <a href="https://policies.google.com/privacy">privacidade do Google</a>.
+    </p>
+    <p>
+      Para desligar de vez: <em>Configurações → Assistente de IA</em>, desmarque “Usar IA”.
+      Sem chave configurada, nada é enviado em nenhuma hipótese.
+    </p>
+  </section>
+
+  <section>
+    <h2>O que o Catalisa não faz</h2>
+    <ul>
+      <li>Não coleta estatísticas de uso, telemetria ou relatórios de erro</li>
+      <li>Não exibe publicidade</li>
+      <li>Não vende, aluga ou compartilha dados com terceiros</li>
+      <li>Não cria conta, perfil ou identificador de usuário</li>
+      <li>Não acessa arquivos do seu computador além dos que você arrastar para ele</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Crianças</h2>
+    <p>
+      O Catalisa é uma ferramenta de trabalho destinada a professores e profissionais
+      adultos. Não é direcionado a menores de 13 anos e não coleta dados deles
+      deliberadamente.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mudanças nesta política</h2>
+    <p>
+      Se algo mudar no que o programa envia ou guarda, esta página é atualizada e a data no
+      topo muda junto. Vale a versão publicada aqui.
+    </p>
+  </section>
+
+  <footer>
+    <p><a href="index.html">Catalisa</a> · <a href="termos.html">Termos de uso</a></p>
+  </footer>
+</main>
+</body>
+</html>
