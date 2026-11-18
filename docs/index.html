@@ -8,28 +8,34 @@
 <meta name="description" content="Catalisa é uma agenda de desktop para Windows: você escreve o compromisso como falaria, importa o cronograma da escola e é avisado das aulas do dia.">
 <link rel="icon" href="images/catalisa-logo.png">
 <style>
+  /* Mesmas cores do programa, nos dois temas. */
   :root { --bg:#f4f3f1; --card:#ffffff; --text:#1e1e1c; --muted:#6a6862; --accent:#16796a; --line:#e3e1dd; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#1f1f1e; --card:#282827; --text:#f2f1ef; --muted:#a9a7a2; --accent:#3fb39f; --line:#3a3a38; } }
+  @media (prefers-color-scheme: dark) { :root { --bg:#2b2b2a; --card:#353533; --text:#f3f2ef; --muted:#bbb9b4; --accent:#3fb39f; --line:#484845; } }
   * { box-sizing:border-box }
   body { margin:0; font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
-  main { max-width:860px; margin:0 auto; padding:48px 20px 64px }
-  header { text-align:center; margin-bottom:36px }
+  main { max-width:980px; margin:0 auto; padding:48px 20px 64px }
+  header { text-align:center; margin-bottom:28px }
   header img { width:112px; height:112px; border-radius:26px }
   h1 { font-size:40px; margin:14px 0 4px; letter-spacing:.5px }
   .tagline { color:var(--muted); font-size:18px; margin:0 }
   .cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px }
   .btn { display:inline-block; padding:11px 22px; border-radius:8px; text-decoration:none; font-weight:600; border:1px solid var(--line); color:var(--text); background:var(--card) }
-  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent) }
+  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); font-size:17px; padding:13px 28px }
+  .versao { color:var(--muted); font-size:14px; margin-top:10px }
   section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 28px; margin-bottom:16px }
   h2 { font-size:22px; margin:0 0 12px }
   h3 { font-size:16px; margin:18px 0 6px }
-  ul { padding-left:20px; margin:0 }
+  ul, ol { padding-left:22px; margin:0 }
   li { margin:6px 0 }
   p { margin:10px 0 }
-  .shot { width:100%; border-radius:10px; border:1px solid var(--line); margin-top:8px }
+  .shot { width:100%; height:auto; border-radius:10px; border:1px solid var(--line); display:block; margin:6px 0 4px }
+  .legenda { color:var(--muted); font-size:14px; margin:4px 0 22px; text-align:center }
+  .duas { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+  @media (max-width:720px) { .duas { grid-template-columns:1fr } }
   footer { text-align:center; color:var(--muted); font-size:14px; margin-top:32px }
   footer a, section a { color:var(--accent) }
   .nota { color:var(--muted); font-size:14px }
+  .destaque { border-left:3px solid var(--accent); padding:4px 0 4px 14px; margin:14px 0 }
 </style>
 </head>
 <body>
@@ -39,12 +45,19 @@
     <h1>Catalisa</h1>
     <p class="tagline">A agenda que entende como você escreve</p>
     <div class="cta">
-      <a class="btn primary" href="privacidade.html">Política de privacidade</a>
-      <a class="btn" href="termos.html">Termos de uso</a>
+      <a class="btn primary" href="https://github.com/thgdsrbrANJOS/catalisa-releases/releases/latest">Baixar para Windows</a>
     </div>
+    <p class="versao">Versão 1.00.0 · gratuito · Windows 10 e 11</p>
   </header>
 
   <section>
+    <picture>
+      <source srcset="images/programa-escuro.png" media="(prefers-color-scheme: dark)">
+      <img class="shot" src="images/programa-claro.png" width="1320" height="816"
+           alt="A janela do Catalisa com a semana de aulas, os calendários à esquerda e os próximos compromissos à direita">
+    </picture>
+    <p class="legenda">A semana na tela: aulas, provas e reuniões, cada uma no seu calendário.</p>
+
     <h2>O que é</h2>
     <p>
       Catalisa é um programa de agenda para Windows, feito para a rotina de quem dá aula.
@@ -61,14 +74,65 @@
     <h2>O que ele faz</h2>
     <ul>
       <li><strong>Entende linguagem natural.</strong> Datas relativas, intervalos de horário, salas e avisos, tudo numa frase só.</li>
-      <li><strong>Importa o cronograma da escola.</strong> Você arrasta o PDF ou o Word e a IA monta os compromissos, mesmo que a tabela não siga formato nenhum.</li>
+      <li><strong>Importa o cronograma da escola.</strong> Você arrasta o PDF ou o Word para a janela e a IA monta os compromissos, mesmo que a tabela não siga formato nenhum.</li>
       <li><strong>Cronograma alterado? Substitui inteiro.</strong> Cada arquivo importado vira uma agenda própria, então reimportar troca tudo daquele cronograma sem bagunçar o resto.</li>
       <li><strong>Aulas que se repetem.</strong> Cadastre uma vez e o semestre inteiro se preenche.</li>
       <li><strong>Avisa com a janela fechada.</strong> Notificação do Windows, ícone na bandeja e início junto com o sistema.</li>
       <li><strong>Tarefas separadas dos compromissos.</strong> “Montar a prova” é tarefa; “aplicar a prova” é compromisso.</li>
       <li><strong>Imprime a semana.</strong> Uma folha A4 deitada, feita para levar na pasta.</li>
-      <li><strong>Sincroniza com o Google Calendar</strong>, com você escolhendo quais calendários aparecem.</li>
+      <li><strong>Sincroniza com o Google Agenda</strong>, inclusive os cronogramas importados, que passam a aparecer no celular.</li>
+      <li><strong>Tema claro e escuro</strong>, acompanhando o Windows.</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>IA grátis, em um clique</h2>
+    <p>
+      A IA é opcional: o leitor de frases do próprio Catalisa resolve a maior parte sozinho.
+      Para as frases confusas e para ler cronogramas, dá para ligar a IA de graça: o botão
+      <strong>Ativar IA grátis</strong> abre a página do Groq, você entra com a sua conta Google e
+      copia a chave. Ao voltar, o Catalisa reconhece a chave copiada e <strong>pergunta</strong> se
+      pode usá-la — nada é ativado sem você confirmar.
+    </p>
+    <p>
+      Também funcionam Claude, Gemini, OpenRouter, Mistral e Cerebras. Se o
+      <a href="https://ollama.com">Ollama</a> estiver instalado, a IA roda no próprio computador,
+      sem chave e sem mandar nada para fora.
+    </p>
+    <picture>
+      <source srcset="images/ia-escuro.png" media="(prefers-color-scheme: dark)">
+      <img class="shot" src="images/ia-claro.png" width="880" height="680" loading="lazy"
+           alt="A tela de configurações da IA, com o botão Ativar IA grátis e um campo para colar a chave">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Instalar</h2>
+    <ol>
+      <li>Baixe o <strong>Catalisa-1.00.0.exe</strong> na <a href="https://github.com/thgdsrbrANJOS/catalisa-releases/releases/latest">página de versões</a>.</li>
+      <li>Abra o arquivo. Na primeira vez o Windows pode mostrar <em>“O Windows protegeu o computador”</em>:
+          clique em <strong>Mais informações → Executar assim mesmo</strong>. O aviso aparece porque o
+          programa é novo e não tem certificado pago de editor, não porque haja algo errado com ele.</li>
+      <li>Leia e aceite os termos, escolha os atalhos e pronto. Não pede senha de administrador
+          nem instala nada além do próprio Catalisa.</li>
+    </ol>
+    <div class="destaque">
+      <p style="margin:0">
+        <strong>Atualizações chegam sozinhas.</strong> O Catalisa baixa a versão nova em segundo plano
+        e instala quando você reinicia ou sai do programa, nunca no meio do uso. Dá para desligar em
+        Configurações → Diagnóstico.
+      </p>
+    </div>
+    <p class="nota">
+      Para desinstalar: Configurações do Windows → Aplicativos → Catalisa. A agenda fica guardada,
+      a não ser que você marque para apagar.
+    </p>
+    <picture>
+      <source srcset="images/instalador-escuro.png" media="(prefers-color-scheme: dark)">
+      <img class="shot" src="images/instalador-claro.png" width="975" height="750" loading="lazy"
+           alt="O instalador do Catalisa mostrando os termos de uso, a política de privacidade e as licenças">
+    </picture>
+    <p class="legenda">O instalador mostra os termos de uso, a política de privacidade e as licenças antes de instalar.</p>
   </section>
 
   <section>
@@ -88,20 +152,21 @@
   <section>
     <h2>Requisitos</h2>
     <ul>
-      <li>Windows 10 ou 11</li>
+      <li>Windows 10 ou 11 (64 bits). Não precisa instalar mais nada: o programa já traz tudo de que precisa.</li>
       <li>Para sincronizar com o Google: uma conta Google</li>
-      <li>Para a leitura por IA (opcional): uma chave de API do Claude (Anthropic) ou do Gemini (Google)</li>
+      <li>Para a leitura por IA (opcional): uma chave grátis do Groq, ou de Claude, Gemini, OpenRouter, Mistral ou Cerebras — ou o Ollama no próprio computador, sem chave</li>
     </ul>
   </section>
 
   <footer>
     <p>
       Catalisa é um programa pessoal, desenvolvido por um professor de química para a
-      própria rotina. Não é afiliado ao Google nem à Anthropic.
+      própria rotina. Não é afiliado ao Google, à Anthropic nem aos serviços de IA citados.
     </p>
     <p>
       <a href="privacidade.html">Privacidade</a> ·
-      <a href="termos.html">Termos</a>
+      <a href="termos.html">Termos</a> ·
+      <a href="https://github.com/thgdsrbrANJOS/catalisa-releases/releases">Versões</a>
     </p>
   </footer>
 </main>

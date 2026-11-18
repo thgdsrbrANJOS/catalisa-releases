@@ -40,7 +40,7 @@
   </header>
 
   <h1>Política de privacidade</h1>
-  <p class="data">Última atualização: 16 de novembro de 2026</p>
+  <p class="data">Última atualização: 18 de novembro de 2026</p>
 
   <section>
     <h2>Em uma frase</h2>
@@ -131,9 +131,11 @@
       <em>“prova quinta 14h”</em> é feita por um interpretador que roda na sua máquina.
     </p>
     <p>
-      A IA é um reforço <strong>opcional</strong>, que só entra se você configurar uma chave
-      de API própria, do Claude (Anthropic) ou do Gemini (Google). Quando está ligada, estes
-      são os únicos momentos em que texto sai do seu computador:
+      A IA é um reforço <strong>opcional</strong>, que só entra se você configurar um serviço
+      com conta própria: o Claude (Anthropic), o Gemini (Google) ou um serviço compatível com
+      a API da OpenAI que você escolher — por exemplo Groq, OpenRouter, Mistral ou Cerebras —,
+      ou ainda o Ollama rodando no seu próprio computador. Quando está ligada, estes são os
+      únicos momentos em que texto sai do Catalisa para o serviço escolhido:
     </p>
     <table>
       <tr><th>Quando</th><th>O que é enviado</th></tr>
@@ -162,11 +164,36 @@
       serviço que você escolheu — a cobrança, a retenção e o uso dos dados são do seu
       contrato com eles, não conosco:
       <a href="https://www.anthropic.com/legal/privacy">privacidade da Anthropic</a> ·
-      <a href="https://policies.google.com/privacy">privacidade do Google</a>.
+      <a href="https://policies.google.com/privacy">privacidade do Google</a> ·
+      <a href="https://groq.com/privacy-policy">Groq</a> ·
+      <a href="https://openrouter.ai/privacy">OpenRouter</a> ·
+      <a href="https://mistral.ai/terms#privacy-policy">Mistral</a> ·
+      <a href="https://www.cerebras.ai/privacy-policy">Cerebras</a>.
+    </p>
+    <p>
+      Atenção aos <strong>planos gratuitos</strong>: em vários deles (o do Gemini, o
+      Experiment da Mistral e os modelos gratuitos do OpenRouter, por exemplo) o serviço pode
+      usar o que você envia para treinar ou melhorar os modelos. Se isso importa para você,
+      use um plano pago ou o Ollama, em que nada sai do seu computador.
     </p>
     <p>
       Para desligar de vez: <em>Configurações → Assistente de IA</em>, desmarque “Usar IA”.
       Sem chave configurada, nada é enviado em nenhuma hipótese.
+    </p>
+  </section>
+
+  <section>
+    <h2>Atualizações</h2>
+    <p>
+      Para saber se existe uma versão nova, o Catalisa consulta a página de versões do
+      próprio programa no GitHub (<code>api.github.com</code>) ao abrir e a cada seis horas, e
+      baixa de lá o arquivo da versão nova quando houver. O pedido leva só o nome e a versão do
+      programa; nenhum dado da sua agenda, conta ou configuração vai junto. Como em qualquer
+      acesso à internet, o GitHub recebe o endereço IP da sua conexão, conforme a
+      <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement">política de privacidade do GitHub</a>.
+    </p>
+    <p>
+      Para desligar: <em>Configurações → Diagnóstico</em>, desmarque “Atualizar sozinho”.
     </p>
   </section>
 
